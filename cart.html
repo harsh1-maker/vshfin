@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Review and securely pay for your VSH Tank Cleaning booking.">
+<title>Cart & Checkout | VSH Tank Cleaning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="container nav-wrapper">
+
+<a href="index.html" class="brand">
+<div class="brand-icon">V</div>
+
+<div class="brand-text">
+<strong>VSH Tank Cleaning</strong>
+<span>Water tank cleaning</span>
+</div>
+</a>
+
+<div class="nav-links">
+<a href="services.html">Services</a>
+<a href="prices.html">Prices</a>
+<a href="areas.html">Areas</a>
+<a href="reviews.html">Reviews</a>
+<a href="process.html">Process</a>
+<a href="guides.html">Guides</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart (<span data-cart-count>0</span>)</a>
+</div>
+
+<div class="nav-actions">
+<a href="tel:+919599057079" class="phone-link">
++91 95990 57079
+</a>
+
+<a href="cart.html" class="btn btn-primary">
+Book now
+</a>
+
+<button class="menu-toggle">
+☰
+</button>
+</div>
+
+<nav class="mobile-nav">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="prices.html">Prices</a>
+<a href="areas.html">Areas</a>
+<a href="reviews.html">Reviews</a>
+<a href="process.html">Process</a>
+<a href="guides.html">Guides</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart <span data-cart-count>0</span></a>
+</nav>
+
+</div>
+</header>
+
+<section class="page-hero">
+<div class="container">
+
+<span class="eyebrow">
+YOUR BOOKING
+</span>
+
+<h1>
+Review your tank cleaning cart
+</h1>
+
+<p>
+Update quantities, apply the automatic multi-tank discount
+and proceed to secure Razorpay Checkout.
+</p>
+
+</div>
+</section>
+
+<section class="content-sec">
+
+<div class="container">
+
+<div class="cart-layout">
+
+<div class="cart-list">
+<div id="cart-items"></div>
+</div>
+
+<div class="summary" id="cart-summary"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<div
+id="checkout-modal"
+hidden
+style="
+position:fixed;
+inset:0;
+background:rgba(15,23,42,.55);
+z-index:150;
+padding:20px;
+overflow:auto
+">
+
+<div
+class="form-card"
+style="
+max-width:560px;
+margin:5vh auto;
+position:relative
+">
+
+<button
+onclick="closeCheckout()"
+style="
+position:absolute;
+right:18px;
+top:18px;
+border:0;
+background:transparent;
+font-size:22px;
+cursor:pointer
+">
+×
+</button>
+
+<h2>
+Secure checkout
+</h2>
+
+<p
+style="
+color:var(--text-muted);
+font-size:13px;
+margin:6px 0 18px
+">
+Payment is processed by Razorpay.
+Your card/UPI details are not handled by this website.
+</p>
+
+<div
+id="payment-error"
+class="notice error"
+hidden>
+</div>
+
+<form id="checkout-form">
+
+<div class="form-group">
+<label>Full name</label>
+<input name="name" required>
+</div>
+
+<div class="form-group">
+<label>Phone</label>
+<input name="phone" required inputmode="tel">
+</div>
+
+<div class="form-group">
+<label>Email</label>
+<input name="email" type="email" required>
+</div>
+
+<div class="form-group">
+<label>Booking details</label>
+
+<textarea
+name="details"
+placeholder="Address, preferred date/time, access notes">
+</textarea>
+
+</div>
+
+<button
+class="btn btn-primary"
+type="submit">
+Pay securely
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+<h4>VSH Tank Cleaning</h4>
+<p>
+Professional water tank cleaning across Delhi NCR
+with transparent pricing and photo proof.
+</p>
+</div>
+
+<div>
+<h4>Pages</h4>
+<ul>
+<li><a href="services.html">Services</a></li>
+<li><a href="prices.html">Prices</a></li>
+<li><a href="areas.html">Areas</a></li>
+<li><a href="guides.html">Guides</a></li>
+</ul>
+</div>
+
+<div>
+<h4>Company</h4>
+<ul>
+<li><a href="about.html">About</a></li>
+<li><a href="process.html">Process</a></li>
+<li><a href="reviews.html">Reviews</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<div>
+<h4>Book</h4>
+<ul>
+<li><a href="tel:+919599057079">Call 9599057079</a></li>
+<li><a target="_blank" href="https://wa.me/919599057079">WhatsApp</a></li>
+<li><a href="cart.html">Cart</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<span>© 2026 VSH Tank Cleaning. All rights reserved.</span>
+<span>Delhi NCR · Professional tank cleaning</span>
+</div>
+
+</div>
+</footer>
+
+<div class="floating">
+<a
+class="float-btn float-wa"
+target="_blank"
+href="https://wa.me/919599057079">
+WA
+</a>
+
+<a
+class="float-btn float-call"
+href="tel:+919599057079">
+☎
+</a>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
