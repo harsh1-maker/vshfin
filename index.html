@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="VSH Tank Cleaning provides professional overhead and underground water tank cleaning across Delhi NCR. Transparent prices, trained crew and photo proof.">
+  <meta property="og:title" content="VSH Tank Cleaning — Delhi NCR">
+  <meta property="og:description" content="Professional water tank cleaning with transparent pricing and photo proof.">
+  <title>Water Tank Cleaning Services in Delhi NCR | VSH Tank Cleaning</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="container nav-wrapper">
+
+    <a href="index.html" class="brand">
+      <div class="brand-icon">V</div>
+      <div class="brand-text">
+        <strong>VSH Tank Cleaning</strong>
+        <span>Water tank cleaning</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="services.html">Services</a>
+      <a href="prices.html">Prices</a>
+      <a href="areas.html">Areas</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="process.html">Process</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart (<span data-cart-count>0</span>)</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="tel:+919599057079" class="phone-link">
+        +91 95990 57079
+      </a>
+
+      <a href="cart.html" class="btn btn-primary">
+        Book now
+      </a>
+
+      <button class="menu-toggle" aria-label="Menu">
+        ☰
+      </button>
+    </div>
+
+    <nav class="mobile-nav" id="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="prices.html">Prices</a>
+      <a href="areas.html">Areas</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="process.html">Process</a>
+      <a href="guides.html">Guides</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Cart <span data-cart-count>0</span></a>
+    </nav>
+
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="badge">
+      Trained crew · Photo proof · Pay after service
+    </div>
+
+    <h1>
+      Professional
+      <span>Water Tank Cleaning</span>
+      Services in Delhi NCR
+    </h1>
+
+    <p class="subtitle">
+      Clean, safe water starts with a clean tank. Compare overhead and underground
+      tank cleaning prices, add your tanks and book a slot with VSH Tank Cleaning
+      in under a minute.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#pricing" class="btn btn-primary">
+        Book Tank Cleaning
+      </a>
+
+      <a href="prices.html" class="btn btn-outline">
+        Check Cleaning Prices
+      </a>
+    </div>
+
+    <div class="hero-highlights">
+      <div class="highlight-item">✓ Overhead from ₹499</div>
+      <div class="highlight-item">✓ Underground from ₹1,499</div>
+      <div class="highlight-item">✓ Up to 15% off on 5+ tanks</div>
+      <div class="highlight-item">✓ Before & after photos</div>
+    </div>
+
+    <div class="calculator-card" id="pricing">
+
+      <div class="calc-header">
+        <h2>Price your tanks in seconds</h2>
+        <span class="live-pill">Live pricing</span>
+      </div>
+
+      <div class="type-tabs">
+
+        <button
+          class="type-tab active"
+          onclick="setTankType('overhead',this)"
+        >
+          <strong>Overhead tank</strong>
+          <span>Rooftop & loft tanks</span>
+        </button>
+
+        <button
+          class="type-tab"
+          onclick="setTankType('underground',this)"
+        >
+          <strong>Underground tank</strong>
+          <span>Sumps below ground</span>
+        </button>
+
+      </div>
+
+      <span class="section-label">
+        Tank capacity
+      </span>
+
+      <div
+        class="capacity-grid"
+        id="capacity-options">
+      </div>
+
+      <span class="section-label">
+        Tanks of this size
+      </span>
+
+      <div class="calc-controls">
+
+        <div class="qty-box">
+          <button type="button" onclick="updateQty(-1)">
+            −
+          </button>
+
+          <span id="qty-display">
+            1
+          </span>
+
+          <button type="button" onclick="updateQty(1)">
+            +
+          </button>
+        </div>
+
+        <button
+          class="btn btn-primary add-btn"
+          id="book-btn"
+          onclick="bookWhatsApp()"
+        >
+          Book 1 tank — ₹499 on WhatsApp
+        </button>
+
+      </div>
+
+      <div class="pincode-bar">
+
+        <input
+          id="pincode-input"
+          placeholder="Check your area PIN code (e.g. 110028)"
+          maxlength="6"
+        >
+
+        <button
+          class="btn btn-outline"
+          onclick="checkPincode()"
+        >
+          Check
+        </button>
+
+      </div>
+
+      <p
+        id="pincode-status"
+        style="font-size:13px;margin-top:8px;color:var(--green)"
+      ></p>
+
+    </div>
+
+    <div class="trust-grid">
+
+      <div class="trust-card">
+        <strong>Prices shown upfront</strong>
+        <p>
+          Per-tank prices with an automatic multi-tank discount
+        </p>
+      </div>
+
+      <div class="trust-card">
+        <strong>Photo proof</strong>
+        <p>
+          Before & after photos on WhatsApp
+        </p>
+      </div>
+
+      <div class="trust-card">
+        <strong>Pay your way</strong>
+        <p>
+          UPI, cards or cash after the service
+        </p>
+      </div>
+
+      <div class="trust-card">
+        <strong>Across Delhi NCR</strong>
+        <p>
+          Delhi, Noida, Gurgaon, Ghaziabad & more
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <span class="eyebrow">
+      OUR SERVICES
+    </span>
+
+    <h2 class="sec-title">
+      One cleaning partner for every kind of tank
+    </h2>
+
+    <p class="sec-desc">
+      From a rooftop household tank to a large underground reservoir,
+      VSH handles routine cleaning with the same careful, documented process.
+    </p>
+
+    <div class="card-grid">
+
+      <div class="info-card">
+        <div class="icon-box">◈</div>
+
+        <h3>
+          Overhead Tank Cleaning
+        </h3>
+
+        <p>
+          Rooftop and loft tanks cleaned, scrubbed, pressure-washed
+          and disinfected.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-box">▣</div>
+
+        <h3>
+          Underground Tank Cleaning
+        </h3>
+
+        <p>
+          Sludge removal and deep cleaning for sumps and underground reservoirs.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="icon-box">⌂</div>
+
+        <h3>
+          Society & Commercial
+        </h3>
+
+        <p>
+          Planned multi-tank cleaning for apartments, offices,
+          shops and facilities.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <span class="eyebrow">
+      WHY VSH
+    </span>
+
+    <h2 class="sec-title">
+      A cleaner process, without the guesswork
+    </h2>
+
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+
+        <h3>
+          Transparent pricing
+        </h3>
+
+        <p>
+          See service prices before booking and get quantity discounts automatically.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+
+        <h3>
+          Trained crew
+        </h3>
+
+        <p>
+          Our process is built around safe access, thorough cleaning and tidy handover.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+
+        <h3>
+          Photo proof
+        </h3>
+
+        <p>
+          Before-and-after photos help you see what was removed
+          and how the tank was left.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+
+        <h3>
+          Flexible payment
+        </h3>
+
+        <p>
+          Book online or through WhatsApp and choose the payment method
+          available for your booking.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <span class="eyebrow">
+      OUR METHOD
+    </span>
+
+    <h2 class="sec-title">
+      Five steps from dirty tank to clean handover
+    </h2>
+
+    <p class="sec-desc">
+      Most household tanks of 500–2,000 litres can be completed in
+      about 45–60 minutes, depending on access and condition.
+    </p>
+
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Drain</h3>
+        <p>
+          Remove remaining water so the tank floor and walls are accessible.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Remove sludge</h3>
+        <p>
+          Lift out settled mud, silt and slime instead of redistributing it.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Scrub & pressure wash</h3>
+        <p>
+          Clean walls, floor, corners, lid and inlet thoroughly.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <h3>Disinfect</h3>
+        <p>
+          Apply an appropriate disinfecting treatment and rinse as required.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <h3>Photo proof</h3>
+        <p>
+          Share before-and-after photos and complete the handover.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <span class="eyebrow">
+      REVIEWS
+    </span>
+
+    <h2 class="sec-title">
+      What customers can expect
+    </h2>
+
+    <p class="sec-desc">
+      We don't publish fabricated review counts or ratings.
+      Here are the service qualities we aim to deliver on every visit.
+    </p>
+
+    <div class="review-grid">
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Clear pricing, a tidy process and proper communication
+          from booking through handover.
+        </p>
+        <strong>Service standard</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Before-and-after photos make it easy to understand
+          what was cleaned and completed.
+        </p>
+        <strong>Photo proof</strong>
+      </div>
+
+      <div class="review">
+        <div class="stars">★★★★★</div>
+        <p>
+          Multi-tank bookings are structured clearly so societies
+          and businesses can plan maintenance.
+        </p>
+        <strong>Multi-tank service</strong>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <span class="eyebrow">
+      DELHI NCR
+    </span>
+
+    <h2 class="sec-title">
+      Serving homes, societies and businesses across NCR
+    </h2>
+
+    <p class="sec-desc">
+      Gurugram, Delhi, Noida, Greater Noida, Ghaziabad,
+      Faridabad and nearby areas.
+    </p>
+
+    <a class="btn btn-primary" href="areas.html">
+      See service areas
+    </a>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <span class="eyebrow">
+      FAQ
+    </span>
+
+    <h2 class="sec-title">
+      Common tank-cleaning questions
+    </h2>
+
+    <div class="faq-list">
+
+      <details>
+        <summary>
+          How often should a water tank be cleaned?
+        </summary>
+
+        <p>
+          Many households schedule cleaning around every 6–12 months,
+          with more frequent cleaning where tanks collect visible sediment
+          or usage conditions demand it.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Do you clean underground tanks?
+        </summary>
+
+        <p>
+          Yes. Underground sumps and larger reservoirs can be booked
+          using the underground tank service and confirmed according
+          to access and size.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          Do I need to empty the tank before the team arrives?
+        </summary>
+
+        <p>
+          No. The cleaning process includes draining remaining water
+          where access and site conditions permit.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          How do I book?
+        </summary>
+
+        <p>
+          Use the price calculator, add services to the cart,
+          pay securely online, or message VSH on WhatsApp.
+        </p>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="content-sec reveal">
+  <div class="container">
+
+    <div
+      class="calculator-card"
+      style="max-width:none;background:var(--dark);color:#fff"
+    >
+
+      <span
+        class="eyebrow"
+        style="color:#93c5fd"
+      >
+        READY TO CLEAN?
+      </span>
+
+      <h2
+        class="sec-title"
+        style="color:#fff"
+      >
+        Book your tank cleaning in minutes.
+      </h2>
+
+      <p
+        class="sec-desc"
+        style="color:#cbd5e1"
+      >
+        Choose your tank size, add multiple tanks if needed
+        and continue to secure checkout.
+      </p>
+
+      <a class="btn btn-primary" href="prices.html">
+        View prices & book
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h4>VSH Tank Cleaning</h4>
+        <p>
+          Professional water tank cleaning across Delhi NCR
+          with transparent pricing and photo proof.
+        </p>
+      </div>
+
+      <div>
+        <h4>Pages</h4>
+
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="prices.html">Prices</a></li>
+          <li><a href="areas.html">Areas</a></li>
+          <li><a href="guides.html">Guides</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Company</h4>
+
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Book</h4>
+
+        <ul>
+          <li>
+            <a href="tel:+919599057079">
+              Call 9599057079
+            </a>
+          </li>
+
+          <li>
+            <a
+              target="_blank"
+              href="https://wa.me/919599057079"
+            >
+              WhatsApp
+            </a>
+          </li>
+
+          <li>
+            <a href="cart.html">
+              Cart
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>
+        © 2026 VSH Tank Cleaning. All rights reserved.
+      </span>
+
+      <span>
+        Delhi NCR · Professional tank cleaning
+      </span>
+    </div>
+
+  </div>
+</footer>
+
+<div class="floating">
+  <a
+    class="float-btn float-wa"
+    target="_blank"
+    href="https://wa.me/919599057079"
+    aria-label="WhatsApp"
+  >
+    WA
+  </a>
+
+  <a
+    class="float-btn float-call"
+    href="tel:+919599057079"
+    aria-label="Call"
+  >
+    ☎
+  </a>
+</div>
+
+<script src="js/app.js"></script>
+
+</body>
+</html>
